@@ -9,3 +9,10 @@ check.png
 *.pth
 *.zip
 __pycache__/
+
+data/
+data_test/
+check.png
+*.pth
+*.zip
+__pycache__/
