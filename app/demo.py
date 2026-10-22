@@ -4,13 +4,6 @@ Run from the repo root:  python app/demo.py
 The model runs once per image. The sliders re-filter the saved predictions,
 so they update instantly without re-running the model.
 """
-# For FastAPI
-from fastapi import FastAPI
-app = FastAPI()
-
-# For Flask
-from flask import Flask
-app = Flask(__name__)
 
 import colorsys
 import glob
