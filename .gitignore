@@ -2,3 +2,10 @@ data/
 *.pth
 __pycache__/
 ForgeCrewz/
+
+data/
+data_test/
+check.png
+*.pth
+*.zip
+__pycache__/
