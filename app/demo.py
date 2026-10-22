@@ -14,7 +14,7 @@ from src.visualize import overlay
 from src.model import load_checkpoint_for_inference
 
 CHECKPOINT = "models/epoch14.pth"
-DEFAULT_THRESHOLD = 0.5   # PROVISIONAL: replace with B's PQ-based best threshold
+DEFAULT_THRESHOLD = 0.9   #  replace with B's PQ-based best threshold
 
 
 def load_model():

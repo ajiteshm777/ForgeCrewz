@@ -15,14 +15,14 @@ IMG_DIR = "data/PhenoBench/val/images"
 GT_DIR = "data/PhenoBench/val/leaf_instances"
 OUT = "results/gallery.png"
 
-ROWS = [   # (row label, filename). Swap any that don't show their condition.
-    ("Overlap",       "06-05_00109_P0037822.png"),
-    ("Occlusion",     "06-05_00103_P0037991.png"),
-    ("Shadow",        "06-05_00195_P0038051.png"),
-    ("Small leaves",  "05-15_00248_P0030686.png"),
-    ("Bright light",  "05-26_00101_P0034282.png"),
-    ("Failure 1",     "05-15_00215_P0030792.png"),
-    ("Failure 2",     "06-05_00199_P0038051.png"),
+ROWS = [
+    ("Overlap",           "06-05_00109_P0037822.png"),
+    ("Low visibility",    "06-05_00103_P0037991.png"),
+    ("Dense, dark image", "06-05_00195_P0038051.png"),
+    ("Small leaves",      "05-15_00248_P0030686.png"),
+    ("Bright soil",       "05-26_00101_P0034282.png"),
+    ("Failure 1",         "05-15_00174_P0030792.png"),
+    ("Failure 2",         "06-05_00040_P0037991.png"),
 ]
 
 
