@@ -36,7 +36,7 @@ def main():
         name = os.path.basename(s.filepath)
         H, W = 1024, 1024
         inst = np.zeros((H, W), dtype=np.uint16)
-        vis = np.zeros((H, W), dtype=np.uint8)
+        vis = np.zeros((H, W), dtype=np.uint8)  # per-leaf visibility, 0-255 like the original
         for k, det in enumerate(s.ground_truth_leaves.detections, start=1):
             if det.mask is None:
                 continue
