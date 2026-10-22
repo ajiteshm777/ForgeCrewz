@@ -19,19 +19,14 @@ import numpy as np
 import torch
 from tqdm import tqdm
 
-# CHECK the real function name in A's src/model.py and change this line if needed.
-from model import build_model
+from model import load_checkpoint_for_inference
 
 IMG_EXTS = {".png", ".jpg", ".jpeg"}
 
 
 def load_model(ckpt_path, device):
-    model = build_model()
-    state = torch.load(ckpt_path, map_location="cpu")
-    if isinstance(state, dict) and "model" in state:  # accept {"model": state_dict, ...}
-        state = state["model"]
-    model.load_state_dict(state)
-    return model.to(device).eval()
+    # pretrained=False inside: no weight download, accepts {"model": ...} or a plain state dict
+    return load_checkpoint_for_inference(ckpt_path, device)
 
 
 @torch.no_grad()
