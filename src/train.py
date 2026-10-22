@@ -51,6 +51,7 @@ def main():
         start_epoch = ck["epoch"] + 1
         print(f"Resumed from epoch {start_epoch}")
 
+    warm = min(200, len(dl))  # warmup steps, never longer than one epoch
     for epoch in range(start_epoch, args.epochs):
         model.train()
         t0, running = time.time(), 0.0
@@ -59,9 +60,9 @@ def main():
             tgts = [{k: v.to(device) for k, v in t.items()} for t in tgts]
 
             # warmup for the first epoch avoids early divergence
-            if epoch == 0 and it < 200:
+            if epoch == 0 and it < warm:
                 for g in opt.param_groups:
-                    g["lr"] = args.lr * (it + 1) / 200
+                    g["lr"] = args.lr * (it + 1) / warm
 
             with torch.autocast(device_type=device.type, enabled=device.type == "cuda"):
                 losses = model(imgs, tgts)
