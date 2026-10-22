@@ -7,3 +7,9 @@ tqdm
 phenobench
 gradio
 matplotlib
+--extra-index-url https://download.pytorch.org/whl/cpu
+streamlit
+opencv-python-headless
+numpy
+pillow
+huggingface_hub
