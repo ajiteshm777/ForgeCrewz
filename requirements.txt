@@ -1,16 +1,13 @@
 torch
 torchvision
 pycocotools
-opencv-python
+opencv-python-headless
 pyyaml
 tqdm
 phenobench
 gradio
 matplotlib
---extra-index-url https://download.pytorch.org/whl/cpu
-streamlit
-opencv-python-headless
 numpy
 pillow
+pandas
 huggingface_hub
-fastapi

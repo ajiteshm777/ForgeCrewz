@@ -1,3 +1,9 @@
+   ---
+   title: ForgeCrewz
+   emoji: 🌿
+   sdk: gradio
+   app_file: app/demo.py
+   ---
 # Leaf Instance Segmentation with Mask R-CNN
 
 Detects each visible leaf in a field image and gives it its own pixel-level mask.
