@@ -31,7 +31,7 @@ def main():
     os.makedirs(args.out, exist_ok=True)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    ds = PhenoBenchLeaves(args.data, "train", train=True, limit=args.overfit or None)
+    ds = PhenoBenchLeaves(args.data, "train", train=(args.overfit == 0), limit=args.overfit or None)
     dl = DataLoader(ds, batch_size=args.bs, shuffle=True, num_workers=args.workers,
                     collate_fn=collate_fn, drop_last=len(ds) > args.bs)
 
