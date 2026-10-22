@@ -16,3 +16,4 @@ check.png
 *.pth
 *.zip
 __pycache__/
+.gradio/
