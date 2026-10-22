@@ -1,3 +1,9 @@
+from fastapi import FastAPI
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"status": "ok"}
 import streamlit as st
 from PIL import Image
 import numpy as np

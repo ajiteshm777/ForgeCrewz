@@ -13,3 +13,4 @@ opencv-python-headless
 numpy
 pillow
 huggingface_hub
+fastapi
