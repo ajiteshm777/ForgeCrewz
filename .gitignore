@@ -1,0 +1,8 @@
+data/
+checkpoints/
+*.pth
+*.pt
+*.zip
+__pycache__/
+.ipynb_checkpoints/
+predictions/
