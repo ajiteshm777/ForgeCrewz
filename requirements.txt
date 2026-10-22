@@ -1,0 +1,8 @@
+torch
+torchvision
+pycocotools
+opencv-python
+pyyaml
+tqdm
+phenobench
+gradio
